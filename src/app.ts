@@ -7,7 +7,7 @@ import {
   EVENTS,
 } from "@builderbot/bot";
 import { MemoryDB } from "@builderbot/bot";
-import { BaileysProvider } from "aurik3-builderbot-baileys-custom";
+import { BaileysProvider } from "@builderbot/provider-baileys";
 import { toAsk, httpInject } from "@builderbot-plugins/openai-assistants";
 import { typing } from "./utils/presence";
 
@@ -99,7 +99,7 @@ const main = async () => {
    * @type {BaileysProvider}
    */
   const adapterProvider = createProvider(BaileysProvider, {
-    version: [2, 3000, 1025190524],
+    version: [2, 3000, 1027934701],
     groupsIgnore: true,
     readStatus: false,
   });
