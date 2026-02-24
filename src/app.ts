@@ -65,7 +65,7 @@ const handleQueue = async (userId) => {
  * @type {import('@builderbot/bot').Flow<BaileysProvider, MemoryDB>}
  */
 const welcomeFlow = addKeyword<BaileysProvider, MemoryDB>(
-  EVENTS.WELCOME
+  EVENTS.WELCOME,
 ).addAction(async (ctx, { flowDynamic, state, provider }) => {
   const userId = ctx.from; // Use the user's ID to create a unique queue for each user
 
@@ -99,7 +99,7 @@ const main = async () => {
    * @type {BaileysProvider}
    */
   const adapterProvider = createProvider(BaileysProvider, {
-    version: [2, 3000, 1027934701],
+    version: [2, 3000, 1033927531],
     groupsIgnore: true,
     readStatus: false,
   });
